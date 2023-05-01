@@ -168,7 +168,7 @@
     margin-bottom: 15px;
     height:calc(100% - 19vh);
     width: 100%;
-    display:inline-flex;
+    display:flex;
     flex-wrap: wrap;
     /* display: grid; */
     justify-content: center;
