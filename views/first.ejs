@@ -67,10 +67,15 @@
     background-color: rgb(100,150,255);
   }
   h6{
+    /* font-family: "Satisfy"; */
+    font-family: "Caveat";
+    font-size: 25px;
     margin-left: 25px;
     margin-top: 10px;
   }
   h2{
+    /* font-family: "Caveat"; */
+  font-family: "Kalam";
     margin-left: 15px;
   }
   h1{
@@ -103,7 +108,17 @@
   margin-top: 10px;
 }
 nav ul li img{
-    width:70px;
+    width:90px;
+    display: block;
+    /* margin-right:50px ; */
+    /* padding: 10px; */
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: opacity 0.5s, background 0.5s;
+}
+nav ul li #d{
+    width:90px;
     display: block;
     /* margin-right:50px ; */
     /* padding: 10px; */
@@ -118,6 +133,13 @@ nav ul li img{
 
 }
 
+h3{
+  font-family: "Dancing Script";
+}
+h4{
+  font-family: "Kalam";
+}
+
   </style>
 </head>
 <body>
@@ -126,13 +148,14 @@ nav ul li img{
                     <h1>Welcome to MeetVista!</h1>
                     <br>
                     <h2>Say goodbye to distance, <br> with our video calling app.</h2>
-                    <h6>Get ready to connect like never before</h6>
-
+                    <h6>Get ready to connect like never before....</h6>
+                    <!-- <h3>get Say hello to seamless video calling</h3>
+                    <h4>Experience video calling like never before</h4> -->
                     <div id="btn-div">
                         <nav>
                             <ul>
-                               <a href="/craeteroom/new" name="id"> <li><img src="wired-lineal-49-plus-circle (1).gif"></li></a>
-                               <a href="/join/room"><li><img src="wired-flat-981-consultation.gif" alt=""></li></a>
+                              <a href="/join/room"><li><img id="d" src="wired-flat-981-consultation (2).gif" alt=""></li></a>
+                               <a href="/craeteroom/new" name="id"> <li><img src="wired-lineal-49-plus-circle (2).gif"></li></a>
                                 <li><img src="wired-flat-21-avatar.gif"></li>
                               </ul>
                         </nav>
