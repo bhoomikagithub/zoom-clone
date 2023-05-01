@@ -1,6 +1,6 @@
 const socket = io('/')
 // var socket = io();
-const videoGrid = document.querySelector(".videos")
+const videoGrid = document.querySelector("#video-div")
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
