@@ -179,7 +179,7 @@
     gap: 40px;
     padding: 20px;
   }
-  .videos{
+  #video-div video{
     position: relative;
     border-radius: 10px;
     height:30vh;
