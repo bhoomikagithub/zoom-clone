@@ -161,5 +161,8 @@ document.querySelector('#roomdets').addEventListener('click', function(){
         document.querySelector('.overlay').style.display = 'none';
         // document.querySelector('#main').style.display = 'initial';
         socket.emit('name', username);
+        document.querySelector(".peoples h2").textContent=username;
+    //  var name=document.querySelector('#name').value;
+    //     document.querySelector("#people-logo").textContent = name.length;
       }
    })

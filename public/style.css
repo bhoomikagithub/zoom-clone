@@ -135,8 +135,9 @@
     padding: 0 10px;
   } 
   #people-logo{
+    margin-left: 20px;
     height:100%;
-    width: 30%;
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -515,34 +516,76 @@ font-weight: 500;
   left: 50%;
   transform: translate(-50%, -50%); */
 }
-.form__field__wrapper {
-  width: 100%;
+.form__field__wrapper1 {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #040404;
   color: #fff;
   box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
+  gap: 15px;
 }
+.form__field__wrapper {
+  width: 80%;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  /* background-color: #1f7af9; */
+  color: #fff;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.form__field__wrapper1 img{
+  width: 35px;
+}
+
 #form__container {
   width: 95vw;
   height: 30vh;
   position: fixed;
   color: #fff;
   top: 50vh;
-  left: 0.5rem;
-  transform: translate(0px, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form__field__wrapper label {
-  font-size: 14px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-family: "Kalam";
   line-height: 1.7em;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   color: #fff;
   display: block;
 }
 
 .form__field__wrapper input {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   color: #fff;
-  width: 100%;
+  width: 80%;
   margin: 0;
   border: none;
   border-radius: 5px;
