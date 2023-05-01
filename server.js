@@ -26,9 +26,16 @@ app.get('/', (req, res) => {
 app.post('/joinroom', function(req, res){
   res.redirect(`/${req.body.id}`)
 })
+
+app.get('/join/room', function(req, res){
+  res.render('welcome', { roomId: req.params.room })  
+})
 app.get('/:room', (req, res) => {
   res.render('index', { roomId: req.params.room })
 })
+app.get('/craeteroom/new', function(req, res){
+  res.redirect(`/${uuidV4()}`)
+ })
 
 io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {

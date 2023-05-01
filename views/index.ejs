@@ -18,14 +18,41 @@
   </head>
   <body>
   
+
+    <div class="overlay">
+      <main id="room__lobby__container">
+          
+          <div id="form__container">
+               <div id="form__container__header">
+                   <p>👋 Create Room</p>
+               </div>
+   
+   
+   
+                   <div class="form__field__wrapper">
+                       <label>Your Name</label>
+                       <input type="text" id="name" required placeholder="Enter your display name..." />
+                   </div>
+   
+                   
+   
+                   <div class="form__field__wrapper">
+                       <button id="roomdets">Go to Room 
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+                      </button>
+                   </div>
+          </div>
+       </main>
+   </div>
   <div id="main">
+
      <div id="leftPart">
       <nav>
         <ul>
             <li><img src="https://i.postimg.cc/JnggC78Q/video.png"></li>
-            <li><img src="https://i.postimg.cc/vmb3JgVy/message.png"></li>
+            <li><img src="https://i.postimg.cc/vmb3JgVy/message.png" id="msgs"></li>
             <li><img src="https://i.postimg.cc/qR7Q7PwZ/notification.png"></li>
-            <li><img src="https://i.postimg.cc/k4DZH604/users.png"></li>
+            <li><img src="https://i.postimg.cc/k4DZH604/users.png" id="ppl"></li>
         </ul>
     </nav>
 
@@ -121,12 +148,46 @@
 
           </div>
   
-
         </div>  
   </div>
+  <div class="card bg-blue p-4" id="security" style="display: initial;border-radius: 10px;width: 18rem; position: absolute;top: -20rem; right: 45rem;color: white;background-color: rgb(29,36,47);font-size: 20px;">
+    <i class="ri-close-line" style="position: absolute; top: 0;right: 0;color: white;cursor: pointer;"></i>
+    <h1 style="font-size: 23px;">About</h1>
+    <h4 style="font-size: 15px;">Name : <span class="nameuser"></span></h4>
+    <h5 style="font-size: 14px;">Room ID : <input type="text" style="width: 40%; outline: none; border: none; color: white; background-color: transparent;" id="input" value="<%=roomId%>"> <i class="ri-file-copy-2-fill" id="execCopy" style="margin-left: 20px;"></i></h5>
+    </div>
   <!-- <script src="script.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
- 
+ <script>
+  var securebool = true;
+   document.querySelector('#wtbrd-div').addEventListener('click', function(){
+      if(securebool){
+         document.querySelector('#security').style.top = '2.8rem';
+         securebool = false;
+      }else{
+         document.querySelector('#security').style.top = '-20rem';
+         securebool = true;
+      }
+   })
+   document.querySelector('#invite-logo').addEventListener('click', function(){
+      if(securebool){
+         document.querySelector('#security').style.top = '2.8rem';
+         securebool = false;
+      }else{
+         document.querySelector('#security').style.top = '-20rem';
+         securebool = true;
+      }
+   })
+   document.querySelector('#security i').addEventListener('click', function(){
+    document.querySelector('#security').style.top = '-20rem';
+
+   })
+document.querySelector('#execCopy').addEventListener('click', execCopy);
+function execCopy() {
+  document.querySelector("#input").select();
+  document.execCommand("copy");
+}
+ </script>
   </body>
 </html>

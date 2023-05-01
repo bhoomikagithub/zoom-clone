@@ -49,7 +49,19 @@ document.querySelector("#chat-btn").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
 })
+document.querySelector("#msgs").addEventListener("click", function(){
+  document.querySelector("#msg-div").style.display="initial";
+  document.querySelector("#participants-div").style.display="none";
+})
 document.querySelector("#prt-btn").addEventListener("click", function(){
+  document.querySelector("#msg-div").style.display="none";
+  document.querySelector("#participants-div").style.display="initial";
+})
+document.querySelector("#people-logo").addEventListener("click", function(){
+  document.querySelector("#msg-div").style.display="none";
+  document.querySelector("#participants-div").style.display="initial";
+})
+document.querySelector("#ppl").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="none";
   document.querySelector("#participants-div").style.display="initial";
 })
@@ -138,3 +150,16 @@ const setPlayVideo = () => {
   `
   document.querySelector('#vdo-div').innerHTML = html;
 }
+
+
+let username;
+document.querySelector('#roomdets').addEventListener('click', function(){
+      //  roomname = document.querySelector('#room').value;
+      username = document.querySelector('#name').value;
+      if(username.trim().length > 2){
+        document.querySelector('.nameuser').textContent = username;
+        document.querySelector('.overlay').style.display = 'none';
+        // document.querySelector('#main').style.display = 'initial';
+        socket.emit('name', username);
+      }
+   })
