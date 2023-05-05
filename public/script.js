@@ -86,6 +86,10 @@ function connectToNewUser(userId, stream) {
     video.remove()
   })
 
+  // call.on("cut", ()=>{
+  //   video.remove()
+
+  // })
   peers[userId] = call
 }
 
@@ -97,7 +101,9 @@ function addVideoStream(video, stream) {
   videoGrid.append(video)
 }
 
-
+document.querySelector("#bgc").addEventListener("click",function(){
+  window.close();
+})
 
 const muteUnmute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
