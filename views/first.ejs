@@ -22,7 +22,8 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    background-color:rgb(8, 8, 8);
+    /* background-color:rgb(8, 8, 8); */
+    background:linear-gradient(to right, rgb(0, 0, 0),rgb(15, 34, 77), rgb(0, 0, 0));
     /* padding: 20px; */
     display: flex;
     justify-content: space-between;
@@ -33,7 +34,7 @@
     height: 80%;
     width: 60%;
     /* background-color:rgb(143, 30, 30); */
-    padding: 100px 80px;
+    padding: 100px 45px;
     /* display: flex; */
     color: #fff;
   } 
@@ -68,14 +69,14 @@
   }
   h6{
     /* font-family: "Satisfy"; */
-    font-family: "Caveat";
-    font-size: 25px;
+    /* font-family: "Caveat"; */
+    font-size: 15px;
     margin-left: 25px;
-    margin-top: 10px;
+    font-family: "Kalam";
+    margin-top: 12px;
   }
   h2{
-    /* font-family: "Caveat"; */
-  font-family: "Kalam";
+    font-family: "Gilroy";
     margin-left: 15px;
   }
   h1{
@@ -95,41 +96,61 @@
   
   nav ul{
     position: absolute;
-  left: 5%;
+  left: 3%;
     flex-direction:row; 
     display: flex;
     align-items: center;
     justify-content: space-around;
     
   }
+  nav #n{
+    position: absolute;
+  left: 3%;
+  margin-top: 64px;
+  font-size: 20px;
+  flex-direction:row; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  nav #n h3{
+  
+  font-size: 14px;
+  margin-left: 13px;
+  margin-right: 12px;
+    
+  }
   nav ul li{
-  margin-right: 80px;
+  margin-right: 60px;
     list-style: none;
   margin-top: 10px;
 }
 nav ul li img{
-    width:90px;
+  /* padding: 10px 20px; */
+    width:55px;
     display: block;
     /* margin-right:50px ; */
     /* padding: 10px; */
     cursor: pointer;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     border-radius: 10px;
-    transition: opacity 0.5s, background 0.5s;
+    /* transition: opacity 0.5s ; */
+    background-color: rgb(60, 145, 255);
 }
 nav ul li #d{
-    width:90px;
+    width:55px;
     display: block;
     /* margin-right:50px ; */
     /* padding: 10px; */
     cursor: pointer;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     border-radius: 10px;
-    transition: opacity 0.5s, background 0.5s;
+    /* transition: opacity 0.5s, background 0.5s; */
 }
  nav ul li img:hover{
     opacity: 1;
-    background: #4d6181;
+    background: #004cc7;
 }
 #meet{
   height: 134px;
@@ -140,13 +161,6 @@ nav ul li #d{
 }
 
 
-
-h3{
-  font-family: "Dancing Script";
-}
-h4{
-  font-family: "Kalam";
-}
 
   </style>
 </head>
@@ -163,9 +177,14 @@ h4{
                     <div id="btn-div">
                         <nav>
                             <ul>
-                              <a href="/join/room"><li><img id="d" src="wired-flat-981-consultation (2).gif" alt=""></li></a>
+                              <a href="/join/room"><li><img id="d" src="wired-flat-981-consultation (3).gif" alt=""></li></a>
                                <a href="/craeteroom/new" name="id"> <li><img src="wired-lineal-49-plus-circle (2).gif"></li></a>
                                 <li><img src="wired-flat-21-avatar.gif"></li>
+                              </ul>
+                            <ul id="n">
+                              <li><h3>join</h3></li>
+                             <li><h3>Create</h3></li>
+                             <li><h3>info</h3></li>
                               </ul>
                         </nav>
                         </div>

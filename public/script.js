@@ -1,6 +1,7 @@
 const socket = io('/')
 // var socket = io();
 const videoGrid = document.querySelector("#video-div")
+// const entryvideo = document.querySelector("#entryvideo")
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
@@ -53,15 +54,22 @@ document.querySelector("#cb").addEventListener("click", function(){
   document.querySelector("#cp").style.backgroundColor="transparent"
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
 })
 document.querySelector("#closechat").addEventListener("click", function(){
   // document.querySelector("#rightPart").style.width="0";
   document.querySelector("#rightPart").style.display="none";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
   document.querySelector("#middlePart").style.width="100vw";
 
 })
 
 document.querySelector("#msgs").addEventListener("click", function(){
+  document.getElementById("msgs").style.transition = "all 2s";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
   document.querySelector("#rightPart").style.display="flex";
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
@@ -83,6 +91,8 @@ document.querySelector("#cp").addEventListener("click", function(){
   document.querySelector("#cb").style.backgroundColor="transparent"
   document.querySelector("#msg-div").style.display="none";
   document.querySelector("#participants-div").style.display="initial";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
 })
 document.querySelector("#people-logo").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="none";
