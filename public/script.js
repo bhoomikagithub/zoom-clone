@@ -68,9 +68,12 @@ document.querySelector("#ppl").addEventListener("click", function(){
 socket.on('user-disconnected', userId => {
   if (peers[userId]) peers[userId].close()
 })
-// socket.on('user-disconnected', userId => {
-//   document.querySelector("#bgc").addEventListener("click")
-// })
+
+
+// document.querySelector("#bgc-div").addEventListener("click",function(){
+// //  peers[userId].close();
+//   window.close();
+//  })
 
 myPeer.on('open', id => {
   socket.emit('join-room', ROOM_ID, id)
@@ -85,10 +88,9 @@ function connectToNewUser(userId, stream) {
   call.on('close', () => {
     video.remove()
   })
-
+ 
   // call.on("cut", ()=>{
   //   video.remove()
-
   // })
   peers[userId] = call
 }
@@ -101,9 +103,7 @@ function addVideoStream(video, stream) {
   videoGrid.append(video)
 }
 
-document.querySelector("#bgc").addEventListener("click",function(){
-  window.close();
-})
+
 
 const muteUnmute = () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
@@ -130,17 +130,17 @@ const playStop = () => {
 
 const setMuteButton = () => {
   const html = `
-    <i class="fas fa-microphone"></i>
+  <i class="fa-solid fa-microphone"></i>
   `
   document.querySelector('#mic-div').innerHTML = html;
 }
 
 const setUnmuteButton = () => {
   const html = `
-  <i class="unmute fas fa-microphone-slash"></i>
+  <i class="fa-solid fa-microphone-slash"></i>
   `
   document.querySelector('#mic-div').innerHTML = html;
-  document.querySelector('#mic-div').innerHTML.style.fontSize = `${15}px`;
+  document.querySelector('#mic-div').innerHTML.style.fontSize = "small";
 }
 
 const setStopVideo = () => {
@@ -171,4 +171,5 @@ document.querySelector('#roomdets').addEventListener('click', function(){
     //  var name=document.querySelector('#name').value;
     //     document.querySelector("#people-logo").textContent = name.length;
       }
-   })
+   }
+   )

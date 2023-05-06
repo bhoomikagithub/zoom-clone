@@ -13,7 +13,8 @@
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
  <script src="/socket.io/socket.io.js" defer></script>
  <link rel="stylesheet" href="style.css">
- <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- <script src="https://kit.fontawesome.com/c939d0e917.js"></script> -->
  <script src="script.js" defer></script>
   </head>
   <body>
@@ -82,10 +83,10 @@
                 <div id="footer-logos">
                  <div id="footer-logos">
                 <div onclick="muteUnmute()" id="mic-div" class="log">
-                  <i class="fas fa-microphone"></i>
+                  <i class="fa-solid fa-microphone"></i>
                 </div>
-                <div id="bgc-div" class="log" id="bgc">
-                <i class="ri-phone-fill" ></i>
+                <div id="bgc-div" class="log" >
+                <i class="ri-phone-fill" id="bgc" ></i>
                 </div>
                 <div onclick="playStop()" id="vdo-div" class="log">
                   <i class="fas fa-video"></i>
@@ -95,8 +96,7 @@
                 </div>
                </div>
               </div>
-
-              
+       
           </div>
 
           </div>
