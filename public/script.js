@@ -45,7 +45,9 @@ document.querySelector("#typing-div button")
         })
 
 })
-document.querySelector("#chat-btn").addEventListener("click", function(){
+document.querySelector("#cb").addEventListener("click", function(){
+  document.querySelector("#cb").style.backgroundColor="#3483ed"
+  document.querySelector("#cp").style.backgroundColor="transparent"
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
 })
@@ -53,7 +55,9 @@ document.querySelector("#msgs").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
 })
-document.querySelector("#prt-btn").addEventListener("click", function(){
+document.querySelector("#cp").addEventListener("click", function(){
+  document.querySelector("#cp").style.backgroundColor="#3483ed"
+  document.querySelector("#cb").style.backgroundColor="transparent"
   document.querySelector("#msg-div").style.display="none";
   document.querySelector("#participants-div").style.display="initial";
 })
@@ -153,6 +157,7 @@ const setStopVideo = () => {
 const setPlayVideo = () => {
   const html = `
   <i class="stop fas fa-video-slash"></i>
+
   `
   document.querySelector('#vdo-div').innerHTML = html;
 }
@@ -173,3 +178,14 @@ document.querySelector('#roomdets').addEventListener('click', function(){
       }
    }
    )
+
+   $('.button-effect').on('click', function(){
+    $(this).addClass('button--click')
+    setTimeout(
+            function() {
+                $('.button-effect').removeClass('button--click');
+            },
+            500);
+    })
+
+    

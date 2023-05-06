@@ -63,7 +63,7 @@
     margin: 10px auto;
     padding: 10px;
     cursor: pointer;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     border-radius: 10px;
     transition: opacity 0.5s, background 0.5s;
 }
@@ -143,7 +143,7 @@
     align-items: center;
     background-color:rgb(41,50,65);
     padding: 0 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #fff;
   font-family: sans-serif;
   font-size: 14px;
@@ -152,7 +152,7 @@
   font-family: sans-serif;
   font-size: 14px;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     height:100%;
     width: 65%;
     display: flex;
@@ -225,17 +225,35 @@
   }  
 
 #footer-logos .log{
-  font-size: 28px;
     /* margin-top: 20px; */
-    flex-direction:row; 
+    /* flex-direction:row; 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 60px; */
+}
+#footer-logos #mic-div{
+    /* margin-top: 20px; */
+    flex-direction:column; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer-logos #vdo-div{
+    margin-top: 5px;
+    flex-direction:column; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #footer-logos .log i{
-  font-size: 28px;
-   
+  font-size: 28px;  
+}
+#footer-logos #mic-div h5{
+  font-size: 8px;
+}
+#footer-logos #vdo-div h5{
+  font-size: 8px;
 }
 
 #footer-logos i{
@@ -246,7 +264,7 @@
     /* margin: 10px auto; */
     padding: 5px 10px;
     cursor: pointer;
-    opacity: 0.5;
+    opacity:1;
     /* border-radius: 10px; */
     transition: opacity 0.5s, background 0.5s;
 }
@@ -257,7 +275,8 @@
 }
 
   #bgc{
-    padding: 2px 5px;
+    margin-top: -6px;
+    padding: 2px 3px;
     opacity: 1;
     border-radius: 50%;
     background-color: #a63b3b;
@@ -276,19 +295,22 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 10px;
     /* background-color: rgb(109, 160, 241); */
   }
   #msg-nav button{
-    padding:8px 30px;
+    padding:8px 20px;
     background-color:rgb(41,50,65);
-    border-radius: 5px;
+    border-radius: 15px;
   font-family: sans-serif;
   font-size: 14px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+  outline: none;
   }
-  #msg-nav button:hover{
+  /* #msg-nav button:hover{
     cursor: pointer;
     background-color: rgb(16,182,101);
-  }
+  } */
   #header #invite-logo:hover{
     cursor:grab;
     background-color: rgb(16,182,101);
@@ -327,7 +349,7 @@
   font-size: 14px;
   gap: 15px;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     height:100%;
     width: 65%;
     display: flex;
@@ -637,4 +659,71 @@ flex-direction: column;
   background-color: rgb(29,36,47);
   justify-content: center;
   /* position: relative ; */
+}
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  position: relative;
+  display: block;
+  /* margin: 1em; */
+  padding: 0;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.4em;
+  transition: color 0.7s;
+    height: 40px;
+    width: 40px;
+  border-radius: 50%;
+/* margin:50px auto; */
+}
+
+.button.button--click,
+.button:focus {
+  outline: none;
+  color: #fff;
+
+}
+
+.button__icon { display: block; }
+.button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.button-effect::after {
+  background: rgba(111,148,182,0.2);
+}
+
+.button-effect.button--click::after {
+  animation: effect 0.3s forwards;
+}
+
+@keyframes effect {
+  0% {
+    transform: scale3d(0.3, 0.3, 1);
+  }
+  25%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(1.2, 1.2, 1);
+  }
 }
