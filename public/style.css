@@ -177,9 +177,9 @@
     background-color:rgb(40, 49, 63);
     gap: 40px;
     padding: 20px;
+    overflow: scroll;
   }
   #video-div video{
-    overflow: scroll;
     position: relative;
     border-radius: 10px;
     height:30vh;
