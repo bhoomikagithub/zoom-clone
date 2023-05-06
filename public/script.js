@@ -84,6 +84,8 @@ document.querySelector("#ppl").addEventListener("click", function(){
   document.querySelector("#cp").style.backgroundColor="#3483ed"
   document.querySelector("#msg-div").style.display="none";
   document.querySelector("#middlePart").style.width="68vw";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
   document.querySelector("#participants-div").style.display="initial";
 })
 document.querySelector("#cp").addEventListener("click", function(){
@@ -95,7 +97,13 @@ document.querySelector("#cp").addEventListener("click", function(){
   document.getElementById("middlePart").style.transition = "all 1.3s";
 })
 document.querySelector("#people-logo").addEventListener("click", function(){
+  document.querySelector("#rightPart").style.display="flex";
+  document.querySelector("#cb").style.backgroundColor="transparent"
+  document.querySelector("#cp").style.backgroundColor="#3483ed"
   document.querySelector("#msg-div").style.display="none";
+  document.querySelector("#middlePart").style.width="68vw";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
   document.querySelector("#participants-div").style.display="initial";
 })
 

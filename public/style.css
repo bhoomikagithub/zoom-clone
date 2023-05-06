@@ -321,7 +321,7 @@
   } */
   #header #invite-logo:hover{
     cursor:grab;
-    background-color: rgb(16,182,101);
+    background-color: #3483ed;
   }
   #typing-div #send-msg:hover{
     cursor:pointer;
