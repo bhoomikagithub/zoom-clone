@@ -54,9 +54,29 @@ document.querySelector("#cb").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
 })
+document.querySelector("#closechat").addEventListener("click", function(){
+  // document.querySelector("#rightPart").style.width="0";
+  document.querySelector("#rightPart").style.display="none";
+  document.querySelector("#middlePart").style.width="100vw";
+
+})
+
 document.querySelector("#msgs").addEventListener("click", function(){
+  document.querySelector("#rightPart").style.display="flex";
   document.querySelector("#msg-div").style.display="initial";
   document.querySelector("#participants-div").style.display="none";
+  document.querySelector("#middlePart").style.width="68vw";
+  document.querySelector("#cb").style.backgroundColor="#3483ed"
+  document.querySelector("#cp").style.backgroundColor="transparent"
+})
+
+document.querySelector("#ppl").addEventListener("click", function(){
+  document.querySelector("#rightPart").style.display="flex";
+  document.querySelector("#cb").style.backgroundColor="transparent"
+  document.querySelector("#cp").style.backgroundColor="#3483ed"
+  document.querySelector("#msg-div").style.display="none";
+  document.querySelector("#middlePart").style.width="68vw";
+  document.querySelector("#participants-div").style.display="initial";
 })
 document.querySelector("#cp").addEventListener("click", function(){
   document.querySelector("#cp").style.backgroundColor="#3483ed"
@@ -68,10 +88,7 @@ document.querySelector("#people-logo").addEventListener("click", function(){
   document.querySelector("#msg-div").style.display="none";
   document.querySelector("#participants-div").style.display="initial";
 })
-document.querySelector("#ppl").addEventListener("click", function(){
-  document.querySelector("#msg-div").style.display="none";
-  document.querySelector("#participants-div").style.display="initial";
-})
+
 socket.on('user-disconnected', userId => {
   if (peers[userId]) peers[userId].close()
 })
@@ -198,3 +215,21 @@ document.querySelector('#roomdets').addEventListener('click', function(){
   div.textContent = username;
   document.querySelector("#chatting").appendChild(div);
 
+
+  // socket.emit("nameset", username)
+
+// socket.on("online", function (data) {
+  // var div = document.createElement("div");
+  // div.classList.add("onlineusers");
+  // div.innerHTML = "Online users " + data.nums.length;
+  // document.querySelector("#people-logo").appendChild(div);
+
+  // var div2 = document.createElement("div");
+  // div2.classList.add("onlineusers");
+  // div2.innerHTML = data.name;
+  // document.querySelector(".peoples").appendChild(div2);
+
+    // })
+
+
+   

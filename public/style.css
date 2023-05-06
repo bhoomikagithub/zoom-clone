@@ -96,6 +96,7 @@
     background-color:rgb(29,36,47);
     padding: 20px;
     display: flex;
+    overflow: hidden;
   }  
   #main-box #middlePart{
     padding:20px 40px;
@@ -287,7 +288,8 @@
     background-color: #872222;
   }
   #msg-nav{
-    font-size: 30px;
+    position: relative;
+    font-size: 25px;
     height:12vh;
     width: 100%;
     padding: 20px;
@@ -295,11 +297,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    /* gap: 10px; */
     /* background-color: rgb(109, 160, 241); */
   }
   #msg-nav button{
-    padding:8px 20px;
+    margin-top: 5px;
+    padding:8px 30px;
     background-color:rgb(41,50,65);
     border-radius: 15px;
   font-family: sans-serif;
