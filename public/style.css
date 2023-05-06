@@ -179,6 +179,9 @@
     padding: 20px;
     overflow: scroll;
   }
+  #video-div::-webkit-scrollbar{
+    display: none;
+  }
   #video-div video{
     position: relative;
     border-radius: 10px;
