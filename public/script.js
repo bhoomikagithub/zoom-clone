@@ -32,7 +32,8 @@ document.querySelector("#typing-div button")
         .addEventListener("click", function(){
           var data=document.querySelector("textarea").value;
           if(data.trim().length>=1){
-            socket.emit("msg",data);
+            // socket.emit("msg",data);
+          socket.emit("msg", { message: data, name: username });
           }
           document.querySelector("textarea").value="";
         })
@@ -40,7 +41,9 @@ document.querySelector("#typing-div button")
         socket.on("msg", function(data){
           var div= document.createElement("div");
           div.classList.add("msg");
-          div.textContent=data;
+          // div.textContent=data;
+          div.textContent=data.name + " : " + data.msg;
+
           document.querySelector("#chatting").appendChild(div);
         })
 
@@ -179,13 +182,19 @@ document.querySelector('#roomdets').addEventListener('click', function(){
    }
    )
 
-   $('.button-effect').on('click', function(){
-    $(this).addClass('button--click')
-    setTimeout(
-            function() {
-                $('.button-effect').removeClass('button--click');
-            },
-            500);
-    })
+  //  $('.button-effect').on('click', function(){
+  //   $(this).addClass('button--click')
+  //   setTimeout(
+  //           function() {
+  //               $('.button-effect').removeClass('button--click');
+  //           },
+  //           500);
+  //   })
 
+  username = document.querySelector('#name').value;
     
+  var div = document.createElement("div");
+  div.classList.add("setName");
+  div.textContent = username;
+  document.querySelector("#chatting").appendChild(div);
+

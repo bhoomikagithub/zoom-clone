@@ -42,10 +42,15 @@ io.on('connection', socket => {
     socket.join(roomId)
     socket.to(roomId).broadcast.emit('user-connected', userId);
     // messages
-    socket.on('msg', (message) => {
-      //send message to the same room
-      io.to(roomId).emit('msg', message)
-  }); 
+  //   socket.on('msg', (message) => {
+  //     //send message to the same room
+  //     io.to(roomId).emit('msg', message)
+  // });
+  
+  socket.on("msg", function (data) {
+      io.to(roomId).emit('msg', { msg: data.message, name: data.name })
+    // io.emit("msgs", { msg: data.message, name: data.name });
+})
 
     socket.on('disconnect', () => {
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
