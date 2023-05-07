@@ -65,6 +65,13 @@ document.querySelector("#closechat").addEventListener("click", function(){
   document.querySelector("#middlePart").style.width="100vw";
 
 })
+document.querySelector("#vd").addEventListener("click", function(){
+  // document.querySelector("#rightPart").style.width="0";
+  document.querySelector("#rightPart").style.display="none";
+  document.getElementById("rightPart").style.transition = "all 1.3s";
+  document.getElementById("middlePart").style.transition = "all 1.3s";
+  document.querySelector("#middlePart").style.width="100vw";
+})
 
 document.querySelector("#msgs").addEventListener("click", function(){
   document.getElementById("msgs").style.transition = "all 2s";
