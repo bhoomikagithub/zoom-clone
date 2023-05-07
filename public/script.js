@@ -120,8 +120,9 @@ socket.on('user-disconnected', userId => {
 
 
 // document.querySelector("#bgc-div").addEventListener("click",function(){
-// //  peers[userId].close();
-//   window.close();
+// // //  peers[userId].close();
+// //   window.close();
+// // connection.close();
 //  })
 
 myPeer.on('open', id => {
@@ -224,14 +225,14 @@ document.querySelector('#roomdets').addEventListener('click', function(){
    }
    )
 
-  //  $('.button-effect').on('click', function(){
-  //   $(this).addClass('button--click')
-  //   setTimeout(
-  //           function() {
-  //               $('.button-effect').removeClass('button--click');
-  //           },
-  //           500);
-  //   })
+   $('.button-effect').on('click', function(){
+    $(this).addClass('button--click')
+    setTimeout(
+            function() {
+                $('.button-effect').removeClass('button--click');
+            },
+            500);
+    })
 
   username = document.querySelector('#name').value;
     
