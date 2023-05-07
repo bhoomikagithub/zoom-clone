@@ -752,3 +752,11 @@ flex-direction: column;
   width: fit-content;
   background-color: #fff;
 } */
+
+.onlineusers {
+  position: absolute;
+  right: 14px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+}

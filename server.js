@@ -35,18 +35,19 @@ app.get('/:room', (req, res) => {
 })
 app.get('/craeteroom/new', function(req, res){
   res.redirect(`/${uuidV4()}`)
- })
-//  var onlineusersid = [];
-// var onlineusersname = [];
+})
 
-io.on('connection', socket => {
+var onlineusersid = [];
+var onlineusersname = [];
+ 
+ io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
     socket.to(roomId).broadcast.emit('user-connected', userId);
     // messages
   //   socket.on('msg', (message) => {
-  //     //send message to the same room
-  //     io.to(roomId).emit('msg', message)
+    //     //send message to the same room
+    //     io.to(roomId).emit('msg', message)
   // });
   
   socket.on("msg", function (data) {
@@ -54,13 +55,13 @@ io.on('connection', socket => {
     // io.emit("msgs", { msg: data.message, name: data.name });
 })
 
-// socket.on("nameset", function (data) {
-//   onlineusersid.push(socket.id);
-//   onlineusersname.push(data);
-//   io.emit("online", { nums: onlineusersid, name: data });
-//   console.log(onlineusersid.length , " nameset wla console ",data ,"  ",onlineusersname);
+socket.on("nameset", function (data) {
+  onlineusersid.push(socket.id);
+  onlineusersname.push(data);
+  io.emit("online", { nums: onlineusersid, name: data });
+  // console.log(onlineusersid.length , " nameset wla console ",data ,"  ",onlineusersname);
 
-// })
+})
 
 
     socket.on('disconnect', () => {
