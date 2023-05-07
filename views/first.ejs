@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zoom</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
@@ -22,8 +23,8 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-    /* background-color:rgb(8, 8, 8); */
-    background:linear-gradient(to right, rgb(0, 0, 0),rgb(15, 34, 77), rgb(0, 0, 0));
+    background-color:rgb(8, 8, 8);
+    background:linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0),rgb(0, 0, 0),rgb(15, 34, 77), rgb(0, 0, 0));
     /* padding: 20px; */
     display: flex;
     justify-content: space-between;
@@ -34,7 +35,7 @@
     height: 80%;
     width: 60%;
     /* background-color:rgb(143, 30, 30); */
-    padding: 100px 45px;
+    padding: 100px 65px;
     /* display: flex; */
     color: #fff;
   } 
@@ -42,11 +43,13 @@
     height: 80%;
     width: 40%;
     /* background-color:rgb(154, 108, 108); */
-    padding: 30px;
+    padding: 30px 20px;
     /* display: flex; */
     color: #fff;
+    /* background: radial-gradient(circle at center, rgb(26, 55, 123), rgb(15, 29, 60),rgb(0,0,0) 100%); */
   } 
   #right #img-div{
+    margin-left: 50px;
       height: 30vw;
       width: 25vw;
       /* background-color: #fff; */
@@ -96,7 +99,7 @@
   
   nav ul{
     position: absolute;
-  left: 3%;
+  left: 4%;
     flex-direction:row; 
     display: flex;
     align-items: center;
@@ -105,7 +108,7 @@
   }
   nav #n{
     position: absolute;
-  left: 3%;
+  left: 4%;
   margin-top: 64px;
   font-size: 20px;
   flex-direction:row; 
@@ -157,10 +160,53 @@ nav ul li #d{
   width: 120px;
   position: absolute;
   top: 0%;
-  left: 2%;
+  left: 3%;
 }
 
-
+span{
+  background-color: rgb(100,150,255);
+  font-weight: 600;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#footer{
+  height: 100px;
+  width: 60%;
+  /* background-color: transparent; */
+  box-shadow: -3px 3px 4px #ffffff;
+      background: inherit;
+      backdrop-filter: blur(1px);
+  border: 1px solid white;
+  border-radius: 15px;
+  position: absolute;
+  bottom: -4%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%,-50%);
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+  /* position: relative; */
+}
+.div{
+  height: 100%;
+  width: 27%;
+  padding: 20px 30px;
+  /* background-color: #13536c; */
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  color: #fff;
+}
+.text{
+  width: 100%;
+  padding-top: 10px;
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ align-items: center;
+  color: #fff;
+}
 
   </style>
 </head>
@@ -170,7 +216,7 @@ nav ul li #d{
             <img src="meet_logo-removebg-preview.png" alt="" id="meet">
         
                 <div id="left">
-                    <h1>Welcome to MeetVista!</h1>
+                    <h1>Welcome to <span>MeetVista!</span></h1>
                     <br>
                     <h2>Say goodbye to distance, <br> with our video calling app.</h2>
                     <h6>Get ready to connect like never before....</h6>          
@@ -182,9 +228,9 @@ nav ul li #d{
                                 <li><img src="wired-flat-21-avatar.gif"></li>
                               </ul>
                             <ul id="n">
-                              <li><h3>join</h3></li>
+                              <li><h3>Join</h3></li>
                              <li><h3>Create</h3></li>
-                             <li><h3>info</h3></li>
+                             <li><h3>Info</h3></li>
                               </ul>
                         </nav>
                         </div>
@@ -193,6 +239,31 @@ nav ul li #d{
                     <div id="img-div">
                         <img src="Remote meeting-rafiki.png" alt="">
                     </div>
+                </div>
+
+                <div id="footer">
+                    <div class="div">
+                      <i class="ri-vidicon-fill" style="font-size: 25px; margin-bottom: 50px;"></i>
+                      <div class="text">
+                        <h2 style="font-size: 18px;font-weight: 600;">Video and Audio</h2>
+                        <p style="font-size: 12px; margin-left: 10px;"> The ability to make video <br> calls with clear audio <br> and high-quality video.</p>
+                      </div>
+                    </div>
+                    <div class="div">
+                      <i class="ri-message-2-fill" style="font-size: 25px;margin-bottom: 50px;" ></i>
+                      <div class="text">
+                        <h2 style="font-size: 18px;font-weight: 600;margin-right: 90px;">Chat</h2>
+                        <p style="font-size: 12px;margin-left: 10px;"> The ability to chat  <br> with other participants <br> during the  call.</p>
+                      </div>
+                    </div>
+                    <div class="div">
+                      <i class="ri-group-fill" style="font-size: 25px;margin-bottom: 50px;"></i>
+                      <div class="text">
+                        <h2 style="font-size: 18px; font-weight: 600; margin-right: 50px;">Scheduling</h2>
+                        <p style="font-size: 12px;margin-left: 10px;"> The ability to schedule <br> video calls and send <br>  invitations to participants.</p>
+                      </div>
+                    </div>
+                 
                 </div>
         </div>
     

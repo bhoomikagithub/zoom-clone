@@ -63,7 +63,6 @@ socket.on("nameset", function (data) {
 
 })
 
-
     socket.on('disconnect', () => {
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
     })
