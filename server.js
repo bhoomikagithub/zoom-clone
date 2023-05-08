@@ -4,11 +4,13 @@ const app = express()
 // app.use(cors())
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+var bodyParser = require('body-parser');
 const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {
   debug: true
 });
 const { v4: uuidV4 } = require('uuid')
+app.use(bodyParser());
 
 app.use('/peerjs', peerServer);
 

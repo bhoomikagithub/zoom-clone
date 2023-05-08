@@ -11,10 +11,10 @@
   <body>
 <main class="bg-dark pt-5 d-flex flex-column text-light justify-content-center align-items-center" style=" height: 100vh;">
 
-    <form action="/joinroom">
+    <form action="/joinroom/" method="post">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">join room</label>
-        <input type="text" class="form-control" id="exampleInputPassword1">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="id">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
