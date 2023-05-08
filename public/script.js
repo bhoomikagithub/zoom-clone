@@ -258,4 +258,22 @@ socket.on("online", function (data) {
     })
 
 
-   
+    username = document.querySelector('#name').value;
+var prtc=document.querySelector('#participants-div')
+    document.querySelector('#roomdets').addEventListener('click', function(){
+          //  roomname = document.querySelector('#room').value;
+          username = document.querySelector('#name').value;
+          if(username.trim().length > 2){
+            document.querySelector('.nameuser').textContent = username;
+            document.querySelector('.overlay').style.display = 'none';
+            socket.emit('name', username);
+          }
+       })
+    
+       socket.on('users', users =>{
+        users.forEach(element => {
+          var p = document.createElement('h6');
+          p.textContent = element;
+          prtc.append(p);
+        });
+      })

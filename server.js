@@ -51,6 +51,10 @@ var onlineusersname = [];
     //     //send message to the same room
     //     io.to(roomId).emit('msg', message)
   // });
+  socket.on('name', username =>{
+    usernames.push(username);
+    socket.emit('users', usernames);
+  })
   
   socket.on("msg", function (data) {
       io.to(roomId).emit('msg', { msg: data.message, name: data.name })
@@ -70,5 +74,8 @@ socket.on("nameset", function (data) {
     })
   })
 })
+
+var usernames = []
+
 
 server.listen(process.env.PORT||3030)
