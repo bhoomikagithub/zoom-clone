@@ -282,6 +282,7 @@ document.querySelector('#roomdets').addEventListener('click', function(){
 
       
   var currentPeer = null
+  var peer = null;
   var screenSharing = false
 function startScreenShare() {
   if (screenSharing) {
