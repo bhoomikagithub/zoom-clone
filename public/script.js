@@ -209,21 +209,7 @@ const setPlayVideo = () => {
 }
 
 
-let username;
-document.querySelector('#roomdets').addEventListener('click', function(){
-      //  roomname = document.querySelector('#room').value;
-      username = document.querySelector('#name').value;
-      if(username.trim().length > 2){
-        document.querySelector('.nameuser').textContent = username;
-        document.querySelector('.overlay').style.display = 'none';
-        // document.querySelector('#main').style.display = 'initial';
-        socket.emit('name', username);
-        document.querySelector(".peoples h2").textContent=username;
-    //  var name=document.querySelector('#name').value;
-    //     document.querySelector("#people-logo").textContent = name.length;
-      }
-   }
-   )
+
 
    $('.button-effect').on('click', function(){
     $(this).addClass('button--click')
@@ -262,7 +248,7 @@ document.querySelector('#roomdets').addEventListener('click', function(){
 var prtc=document.querySelector('#participants-div')
     document.querySelector('#roomdets').addEventListener('click', function(){
           //  roomname = document.querySelector('#room').value;
-          username = document.querySelector('#name').value;
+          // username = document.querySelector('#name').value;
           if(username.trim().length > 2){
             document.querySelector('.nameuser').textContent = username;
             document.querySelector('.overlay').style.display = 'none';
@@ -277,3 +263,19 @@ var prtc=document.querySelector('#participants-div')
           prtc.append(p);
         });
       })
+
+//       let username;
+// document.querySelector('#roomdets').addEventListener('click', function(){
+//       //  roomname = document.querySelector('#room').value;
+//       username = document.querySelector('#name').value;
+//       if(username.trim().length > 2){
+//         document.querySelector('.nameuser').textContent = username;
+//         document.querySelector('.overlay').style.display = 'none';
+//         // document.querySelector('#main').style.display = 'initial';
+//         socket.emit('name', username);
+//         document.querySelector(".peoples h2").textContent=username;
+//     //  var name=document.querySelector('#name').value;
+//     //     document.querySelector("#people-logo").textContent = name.length;
+//       }
+//    }
+//    )
