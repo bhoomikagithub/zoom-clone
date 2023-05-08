@@ -234,28 +234,28 @@ document.querySelector('#roomdets').addEventListener('click', function(){
             500);
     })
 
-  username = document.querySelector('#name').value;
+//   username = document.querySelector('#name').value;
     
-  var div = document.createElement("div");
-  div.classList.add("setName");
-  div.textContent = username;
-  document.querySelector("#chatting").appendChild(div);
+//   var div = document.createElement("div");
+//   div.classList.add("setName");
+//   div.textContent = username;
+//   document.querySelector("#chatting").appendChild(div);
 
 
-  socket.emit("nameset", username)
+//   socket.emit("nameset", username)
 
-socket.on("online", function (data) {
-  var div = document.createElement("div");
-  div.classList.add("onlineusers");
-  div.innerHTML = "Online users " + data.nums.length;
-  document.querySelector("#people-logo").appendChild(div);
+// socket.on("online", function (data) {
+//   var div = document.createElement("div");
+//   div.classList.add("onlineusers");
+//   div.innerHTML = "Online users " + data.nums.length;
+//   document.querySelector("#people-logo").appendChild(div);
 
-  var div2 = document.createElement("div");
-  div2.classList.add("onlineusers");
-  div2.innerHTML = data.name;
-  document.querySelector(".peoples").appendChild(div2);
+//   var div2 = document.createElement("div");
+//   div2.classList.add("onlineusers");
+//   div2.innerHTML = data.name;
+//   document.querySelector(".peoples").appendChild(div2);
 
-    })
+//     })
 
 
     username = document.querySelector('#name').value;

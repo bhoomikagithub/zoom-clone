@@ -39,8 +39,9 @@ app.get('/craeteroom/new', function(req, res){
   res.redirect(`/${uuidV4()}`)
 })
 
-var onlineusersid = [];
-var onlineusersname = [];
+// var onlineusersid = [];
+// var onlineusersname = [];
+var usernames = []
  
  io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
@@ -61,13 +62,12 @@ var onlineusersname = [];
     // io.emit("msgs", { msg: data.message, name: data.name });
 })
 
-socket.on("nameset", function (data) {
-  onlineusersid.push(socket.id);
-  onlineusersname.push(data);
-  io.emit("online", { nums: onlineusersid, name: data });
-  // console.log(onlineusersid.length , " nameset wla console ",data ,"  ",onlineusersname);
-
-})
+// socket.on("nameset", function (data) {
+//   onlineusersid.push(socket.id);
+//   onlineusersname.push(data);
+//   io.emit("online", { nums: onlineusersid, name: data });
+//   // console.log(onlineusersid.length , " nameset wla console ",data ,"  ",onlineusersname);
+// })
 
     socket.on('disconnect', () => {
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
@@ -75,7 +75,6 @@ socket.on("nameset", function (data) {
   })
 })
 
-var usernames = []
 
 
 server.listen(process.env.PORT||3030)
