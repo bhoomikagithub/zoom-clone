@@ -273,11 +273,8 @@ document.querySelector('#roomdets').addEventListener('click', function(){
 
        socket.on('users', users =>{
         users.forEach(element => {
-          // var p = document.createElement('h6');
-          // p.textContent = element;
-          var div2 = document.createElement("div");
-          div2.classList.add("onlineusers");
-          div2.innerHTML = element;
+          var p = document.createElement('h6');
+          p.textContent = element;    
           prtc.append(p);
     // document.querySelector(".peoples").appendChild(div2);
         });
